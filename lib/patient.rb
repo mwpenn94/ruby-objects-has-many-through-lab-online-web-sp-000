@@ -13,13 +13,11 @@ class Patient
   end
   
   def new_appointment(date, doctor)
-    Appointment.new
-    #associte with doctor
-    #give .patient attribute of self
+    Appointment.new(date, self, doctor)
   end
   
   def appointments
-    Appointment.all.select {|a| a.patient == self.name}
+    Appointment.all.select {|a| a.patient == self}
   end
   
   def doctors
