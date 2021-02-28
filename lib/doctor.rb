@@ -13,9 +13,7 @@ class Doctor
   end
   
   def new_appointment(date, patient)
-    Appointment.new
-    #associte with patient
-    #give .doctor attribute of self
+    Appointment.new(date, patient)
   end
   
   def appointments
